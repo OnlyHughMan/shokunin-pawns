@@ -6,7 +6,8 @@
   "author": "Hugh Vidler <hughvidler@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "jest": "^24.7.1"
+    "jest": "^24.7.1",
+    "lodash": "^4.17.11"
   },
   "scripts": {
     "test": "jest"

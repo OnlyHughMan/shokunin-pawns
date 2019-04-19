@@ -1,1 +1,6 @@
-console.log('hello shokunin')
+
+const Game = require('./Game');
+
+const game = new Game();
+
+game.display();
