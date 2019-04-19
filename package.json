@@ -1,0 +1,24 @@
+{
+  "name": "shokunin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:OnlyHughMan/shokunin-pawns.git",
+  "author": "Hugh Vidler <hughvidler@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.7.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "clearMocks": true,
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[tj]s?(x)",
+      "**/*Test.js"
+    ],
+    "testEnvironment": "node"
+  }
+}
