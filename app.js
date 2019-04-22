@@ -1,5 +1,5 @@
 
-const Game = require('./Game');
+const Game = require('./lib/Game');
 
 const game = new Game();
 game.placePiecesOnBoard();
