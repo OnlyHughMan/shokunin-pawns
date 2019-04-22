@@ -14,12 +14,12 @@ describe('printGrid', () => {
   });
 
   it('does not modify occupied cells', () => {
-    printGrid([['k', null],[null, 'P']])
+    printGrid([['k', null], [null, 'P']])
     expect(console.log).toHaveBeenCalledWith('k .\n. P\n');
   });
 
   it('Deals with ', () => {
-    printGrid([['k', 'p'],['b', 'P']])
+    printGrid([['k', 'p'], ['b', 'P']])
     expect(console.log).toHaveBeenCalledWith('k p\nb P\n');
   });
 });

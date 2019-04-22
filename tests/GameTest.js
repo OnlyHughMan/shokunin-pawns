@@ -1,7 +1,7 @@
-const Game = require("../Game");
-const Board = require("../Board");
+const Game = require('../Game');
+const Board = require('../Board');
 
-jest.mock("../Board")
+jest.mock('../Board')
 
 describe('Game', () => {
   describe('new Game()', () => {

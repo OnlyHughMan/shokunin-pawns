@@ -30,4 +30,4 @@ const types = {
   }
 };
 
-module.exports = { allegiances, types}
+module.exports = { allegiances, types }

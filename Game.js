@@ -1,6 +1,7 @@
 const Board = require('./Board');
 const { pickUpThePieces } = require('./pieceMaker')
 const { printGrid } = require('./displayHelper')
+const { place } = require('./piecePlacer');
 
 class Game {
   constructor() {
@@ -8,8 +9,8 @@ class Game {
     this.pieces = pickUpThePieces();
   }
 
-  placePieces() {
-
+  placePiecesOnBoard() {
+    place(this.pieces, this.board)
   }
 
   display() {

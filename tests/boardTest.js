@@ -1,4 +1,4 @@
-const Board = require("../Board");
+const Board = require('../Board');
 
 describe('board', () => {
   describe('new board()', () => {
@@ -8,5 +8,6 @@ describe('board', () => {
       expect(board.grid[7][7]).toEqual(null);
       expect(board.grid[8]).toBeUndefined();
     });
+
   });
 });

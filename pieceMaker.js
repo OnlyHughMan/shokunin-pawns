@@ -1,15 +1,15 @@
+const { flatten } = require('lodash');
 const Piece = require('./Piece');
 const { allegiances, types } = require('./constants');
-const { flatten } = require('lodash');
 
 const generatePieceFrequency = (max) => {
   return Math.ceil(Math.random() * max - 1);
 };
 
 const makePiecesByType = (type, allegiance) => {
-  const number = type.symbol == 'k' ? 1 : generatePieceFrequency(type.max);
-  if (number == 0) return null;
-  return Array(number).fill(new Piece(type.symbol, allegiance));
+  const pieceFrequency = type.symbol.toLowerCase() === 'k' ? 1 : generatePieceFrequency(type.max);
+  if (pieceFrequency === 0) return null;
+  return Array(pieceFrequency).fill(new Piece(type.symbol, allegiance));
 };
 
 const pledgeAllegiance = (allegiance) => {
@@ -20,7 +20,10 @@ const pledgeAllegiance = (allegiance) => {
 
 const pickUpThePieces = () => {
   const pieces = {}
-  allegiances.map(allegiance => pieces[allegiance] = pledgeAllegiance(allegiance));
+  allegiances.map(allegiance => {
+    pieces[allegiance] = pledgeAllegiance(allegiance)
+    return pieces[allegiance];
+  });
   return pieces;
 }
 
